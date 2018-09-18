@@ -1,0 +1,30 @@
+﻿@model Northwind.Core.Data.Product
+@{
+    Layout = "~/Views/Shared/master.cshtml";
+}
+
+<div class="ui segment">
+    <h3>Edit product</h3>
+    <p>You can only edit productname in this version!.</p>
+
+    
+    <form action="/admin/saveproduct" method="post">
+       
+    
+        <div class="ui form" style="width:300px">
+                
+            <div class="field">
+                <input type="hidden" name="id" value="@Model.Id" />
+                <label asp-for="Productname"></label>
+                <input asp-for="Productname" />
+            </div>
+            <div class="ui input">
+                <input type="submit" name="btn" value="Save" />
+            </div>
+
+        </div>
+
+    </form>
+    
+
+</div>

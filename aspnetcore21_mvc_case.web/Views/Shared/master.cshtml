@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nortwind</title>
+    <link href="~/Vendor/semantic/semantic.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="ui segments">
+        <div class="ui segment">
+            <h2 class="ui center aligned header">
+                Northwind
+            </h2>
+            <div class="ui four inverted item menu">
+                <a href="~/" class="item">Home</a>
+                <a href="~/products" class="item">Products</a>
+                <a href="~/Employees" class="item">Employees</a>
+                <a href="~/admin/products" class="active red item">Admin</a>
+            </div>
+        </div>
+        <div class="ui segment">
+            @RenderBody()
+        </div>
+    </div>
+    
+    <script src="~/Vendor/semantic/semantic.js"></script>
+</body>
+</html>

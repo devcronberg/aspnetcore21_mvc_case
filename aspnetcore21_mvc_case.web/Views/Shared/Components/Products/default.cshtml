@@ -1,0 +1,29 @@
+﻿@model List<Northwind.Core.Data.Product>
+
+    <table class="ui collapsing padded table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Productname</th>
+                <th>Unit price</th>
+                @if (ViewBag.admin)
+                {
+                    <th>Edit</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Productname</td>
+                <td style="text-align:right">@item.UnitPrice.ToString("n2")</td>
+                @if (ViewBag.admin)
+                {
+                    <td><a href="~/admin/products/@item.Id">Edit</a></td>
+                }
+            </tr>
+            }
+        </tbody>
+    </table>

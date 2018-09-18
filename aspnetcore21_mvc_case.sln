@@ -3,7 +3,36 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aspnetcore21_mvc_case.web", "aspnetcore21_mvc_case.web\aspnetcore21_mvc_case.web.csproj", "{9646A8C6-8B10-4E4D-823F-BA51C63C899A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLiteDb", "SQLiteDb", "{9FFA0A5A-AF7D-4073-897A-7D8E1202C539}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\temp\Northwind_large.sqlite = ..\..\..\temp\Northwind_large.sqlite
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Core.Data", "Northwind.Core.Data\Northwind.Core.Data.csproj", "{D67E07D6-1246-48FA-94AC-10EA4682D4D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Core.Data.ConsoleTest", "Northwind.Core.Data.ConsoleTest\Northwind.Core.Data.ConsoleTest.csproj", "{C4682295-C181-461D-B7B9-16163969C2D0}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9646A8C6-8B10-4E4D-823F-BA51C63C899A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9646A8C6-8B10-4E4D-823F-BA51C63C899A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9646A8C6-8B10-4E4D-823F-BA51C63C899A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9646A8C6-8B10-4E4D-823F-BA51C63C899A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D67E07D6-1246-48FA-94AC-10EA4682D4D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67E07D6-1246-48FA-94AC-10EA4682D4D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67E07D6-1246-48FA-94AC-10EA4682D4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67E07D6-1246-48FA-94AC-10EA4682D4D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4682295-C181-461D-B7B9-16163969C2D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4682295-C181-461D-B7B9-16163969C2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4682295-C181-461D-B7B9-16163969C2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4682295-C181-461D-B7B9-16163969C2D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
