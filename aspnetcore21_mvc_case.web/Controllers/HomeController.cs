@@ -22,7 +22,7 @@ namespace aspnetcore21_mvc_case.web.Controllers
             this.northwindRepository = northwindRepository;
         }
 
-        [HttpGet("~/")]
+        [HttpGet("~/", Name ="home")]
         public IActionResult Index()
         {
             return View();
@@ -42,7 +42,7 @@ namespace aspnetcore21_mvc_case.web.Controllers
         }
 
         [HttpGet("~/admin/products/", Name = "adminproducts")]
-        public IActionResult AdminProducts(int id)
+        public IActionResult AdminProducts()
         {          
             return View(northwindRepository.GetAllProducts());
         }
@@ -59,6 +59,20 @@ namespace aspnetcore21_mvc_case.web.Controllers
             northwindRepository.UpdateProductName(id, productname);
             return RedirectToAction("adminproducts");
         }
-        
+
+        [HttpGet("~/admin/customers/", Name = "admincustomers")]
+        public IActionResult AdminCustomers()
+        {
+            return View();
+        }
+
+
+        [HttpGet("~/admin/customersjson/", Name = "admincustomersjson")]
+        public IActionResult AdminCustomersJson()
+        {
+            return Json(northwindRepository.GetAllCustomers());
+        }
+
+
     }
 }

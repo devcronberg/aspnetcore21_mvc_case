@@ -9,6 +9,7 @@ namespace Northwind.Core.Data
     {
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         public NorthwindContext()
         {

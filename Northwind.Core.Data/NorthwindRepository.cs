@@ -9,6 +9,14 @@ namespace Northwind.Core.Data
     public class NorthwindRepository
     {
 
+        public List<Customer> GetAllCustomers()
+        {
+            using (NorthwindContext c = new NorthwindContext())
+            {
+                return c.Customers.ToList();
+            }
+        }
+
         public List<Product> GetAllProducts()
         {
             using (NorthwindContext c = new NorthwindContext())

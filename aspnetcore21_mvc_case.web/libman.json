@@ -6,7 +6,7 @@
       "library": "jquery@3.3.1",
       "destination": "wwwroot/Vendor/jquery",
       "files": [ "jquery.min.js" ]
-    },    
+    },
     {
       "provider": "cdnjs",
       "library": "semantic-ui@2.3.3",

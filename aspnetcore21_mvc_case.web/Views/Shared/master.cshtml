@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Nortwind</title>
     <link href="~/Vendor/semantic/semantic.css" rel="stylesheet" />
+    @RenderSection("styles", false)
 </head>
 <body>
     <div class="ui segments">
@@ -11,18 +12,21 @@
             <h2 class="ui center aligned header">
                 Northwind
             </h2>
-            <div class="ui four inverted item menu">
-                <a href="~/" class="item">Home</a>
-                <a href="~/products" class="item">Products</a>
-                <a href="~/Employees" class="item">Employees</a>
-                <a href="~/admin/products" class="active red item">Admin</a>
+            <div class="ui five inverted item menu">
+                <a asp-route="home" class="item">Home</a>
+                <a asp-route="products" class="item">Products</a>
+                <a asp-route="employees" class="item">Employees</a>
+                <a asp-route="adminproducts" class="active red item">Admin/Products</a>
+                <a asp-route="admincustomers" class="active red item">Admin/Customer</a>
             </div>
         </div>
         <div class="ui segment">
             @RenderBody()
         </div>
     </div>
-    
+
+    <script src="~/Vendor/jquery/jquery.min.js"></script>
     <script src="~/Vendor/semantic/semantic.js"></script>
+    @RenderSection("scripts", false)
 </body>
 </html>
